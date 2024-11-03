@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="pedidos.xslt"?>
+<pedidos>
+    <pedido>
+        <codigo>001</codigo>
+        <nome>Notebook</nome>
+        <quantidade>15</quantidade>
+        <preco>2500.00</preco>
+    </pedido>
+    <pedido>
+        <codigo>002</codigo>
+        <nome>Mouse</nome>
+        <quantidade>8</quantidade>
+        <preco>50.00</preco>
+    </pedido>
+    <pedido>
+        <codigo>003</codigo>
+        <nome>Teclado</nome>
+        <quantidade>12</quantidade>
+        <preco>120.00</preco>
+    </pedido>
+    <pedido>
+        <codigo>004</codigo>
+        <nome>Monitor</nome>
+        <quantidade>25</quantidade>
+        <preco>700.00</preco>
+    </pedido>
+</pedidos>

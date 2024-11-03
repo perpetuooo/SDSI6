@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE email [
+<!ELEMENT email (de,para,assunto,corpo)>
+<!ELEMENT de (#PCDATA)>
+<!ELEMENT para (#PCDATA)>
+<!ELEMENT assunto (#PCDATA)>
+<!ELEMENT corpo (#PCDATA)>
+]>
+
+<email>
+<de>Alberto</de>
+<para>Alunos</para>
+<assunto>Aula de Sist. Distribuidos</assunto>
+<corpo>Hoje havera TP!</corpo>
+</email>

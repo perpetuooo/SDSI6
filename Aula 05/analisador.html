@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analisador XML</title>
+    <script language="JavaScript" type="text/javascript">
+        function analisaXML(param) {
+            var fileInput = document.getElementById("arqXML").files[0];
+            if (!fileInput) {
+                alert("Por favor, selecione um arquivo XML.");
+                return;
+            }
+
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                var xmlContent = e.target.result;
+
+                try {
+                    var parser = new DOMParser();
+                    var xmlDoc = parser.parseFromString(xmlContent, "text/xml");
+
+                    var parseError = xmlDoc.getElementsByTagName("parsererror");
+                    if (parseError.length > 0) {
+                        var msg = "Erro ao analisar o XML:\n" + parseError[0].textContent;
+                        alert(msg);
+                    } else {
+                        alert("XML bem formado e válido.");
+                    }
+                } catch (error) {
+                    alert("Erro ao processar o XML: " + error.message);
+                }
+            };
+            reader.readAsText(fileInput);
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <label>Carregue o XML</label><br>
+        <input id="arqXML" type="file" name="arqXML" style="width: 543px; height: 21px;" size="41">
+        <input id="btnAnalisa2" onclick="analisaXML('1');" type="button" value="Analisar" name="btnAnalisa2">
+    </form>
+    <hr>
+</body>
+</html>
